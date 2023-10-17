@@ -1,0 +1,137 @@
+---
+title: "MONITOR COMPRAS PÚBLICAS"
+subtitle: "<span><style='font-size: 10%;'> GABRIELA MATHIEU <br> LATIN R 2023 </style></span>"
+date: "19 de octubre de 2023"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    nature:
+       highlightStyle: github
+       highlightLines: true
+       countIncrementalSlides: false
+       ratio: "16:8"
+       slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+urlcolor: darkblue
+---
+
+```{r, include = F}
+knitr::opts_chunk$set(fig.width = 6, message = FALSE, warning = FALSE, comment = "", cache = FALSE, fig.retina = 3, echo = F)
+library(flipbookr)
+library(flair)
+library(fontawesome)
+
+```
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_xaringan(header_color = "#980043", code_inline_font_size = "2em", header_background_color = "#252525")#  "#980043"
+style_duo_accent(
+  #base_color = "#43a2ca",
+  header_font_google = google_font("Mukta"),#Ubuntu Condensed
+  text_font_google   = google_font("Ubuntu", "300", "300i"),
+  code_font_google   = google_font("Fira Mono"),
+  primary_color      = "#c1447e", 
+  secondary_color    ="#8ba749", 
+  text_font_size     = "25px"
+)
+```
+
+```{r, include=FALSE}
+text_spec <- function(x = "x"){
+  kableExtra::text_spec(x, background = "#b3e2cd", bold = T)
+}
+
+text_spec2 <- function(x = "x"){
+  kableExtra::text_spec(x, background = "#eadd17", bold = T)
+}
+text_spec5 <- function(x = "x"){
+  kableExtra::text_spec(x, color = "#08519c", bold = T)
+}
+```
+
+class: hide-logo
+# SHINY APP
+
+El Monitor de Compras Publicas es un visualizador de datos de las compras que realizan los organismos del Estado uruguayo. 
+
+Se parte de procesar los datos abiertos que publica la Agencia Reguladora de Compras Estatales (ARCE).
+
+.pull-left[
+- Estructurada en `r text_spec("módulos")` 
+
+- Datos organizados en `r text_spec("tablas")` 
+
+- `r text_spec("Funciones específicas")` para procesar los datos y generar gráficos
+
+- `r text_spec("Código")` R, HTML y CSS `r text_spec("por separado")`
+
+- `r text_spec("Control de versiones")`
+
+]
+
+.pull-right[
+- `r text_spec2("Reduce")` la `r text_spec2("extensión")` del código;
+
+- `r text_spec2("Mejora")` uso de la memoria `r text_spec2("RAM")`;
+
+- `r text_spec2("Minimiza")` la `r text_spec2("repetición")` de código;
+
+- `r text_spec2("Mejora legibilidad")` código;
+
+- `r text_spec2("Facilita detección de errores")` y cambios durante el desarrollo;
+
+- Permite `r text_spec2("revertir cambios/versiones")`.
+
+]
+
+---
+# ESTRUCTURA ARCHIVOS
+
+```{r  out.width='50%'}
+knitr::include_graphics("img/estructura_carpetas.png")
+```
+
+---
+# ESTRUCTURA TABLAS
+
+```{r out.width='80%'}
+knitr::include_graphics("img/esquema_tablas2.png")
+```
+
+---
+# MÓDULOS
+
+La APP se estructura en 5 módulos que corresponden a los 5 paneles detallados a continuación:
+
+- `r text_spec("VISUALIZACIONES:")` gráficos interactivos pero fijos para dar un pantallazo general;
+
+- `r text_spec("EXPLORAR COMPRAS:")` permite interactuar con datos y gráficos a nivel de ORGANISMOS/PROVEEDORES/PRODUCTOS para ciertos años;
+
+- `r text_spec("HISTÓRICO:")` permite interactuar con datos y gráficos a nivel de ORGANISMOS/PROVEEDORES/PRODUCTOS según la evolución en el tiempo;
+
+- `r text_spec("DATOS:")` se pueden previsualizar los datos y el diccionario de variables así como también descargarlos;
+
+- `r text_spec("PREGUNTAS FRECUENTES:")`  se listan una serie de preguntas y respuestas necesarias para comprenden los datos.
+
+---
+# APP
+
+```{r echo = FALSE, eval = FALSE, out.width = "100%", fig.align = 'center'}
+knitr::include_graphics("img/app.gif")
+```
+
+---
+# CONTRIBUCIONES
+
+- El código está abierto a contribuciones.
+
+- Código disponible en GitHub: <https://github.com/calcita/compras_publicas>
+
+- APP disponible en: <https://shiny.fcea.udelar.edu.uy/compras_publicas/>
+
+<center>
+<img src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" style="width: 200px; height: 200px;"/>
+</center>
