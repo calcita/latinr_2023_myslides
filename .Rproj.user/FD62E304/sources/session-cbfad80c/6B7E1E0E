@@ -1,26 +1,26 @@
 {
-    "id": "5700FD73",
+    "id": "6B7E1E0E",
     "path": "~/Escritorio/latinR/latinr_2023_myslides/.gitignore",
     "project_path": ".gitignore",
     "type": "gitignore",
-    "hash": "486830509",
+    "hash": "3984279537",
     "contents": "",
     "dirty": false,
-    "created": 1697571114413.0,
+    "created": 1697571639925.0,
     "source_on_save": false,
-    "relative_order": 1,
+    "relative_order": 2,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "4,12",
+        "cursorPosition": "4,5",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1697571236,
+    "lastKnownWriteTime": 1697571645,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1697571236193,
+    "last_content_update": 1697571645075,
     "read_only": false,
     "read_only_alternatives": []
 }
